@@ -1,4 +1,4 @@
-{% set version = '2.4-4' %}
+{% set version = "2.5-0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/GEOmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/GEOmap/GEOmap_{{ version }}.tar.gz
-  sha256: 101f177135514572d2aba44633dae4a870019340cf8570662a9571c61dd86272
+  sha256: 82e5608eda7330632bc67aa662b649e7b7b3ccdfda6a18a19d2e3379e0db1093
 
 build:
-  merge_build_host: True  # [win]
-  number: 1002
+  merge_build_host: true  # [win]
+  number: 0
   skip: true  # [win32]
   rpaths:
     - lib/R/lib/
@@ -52,11 +52,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=GEOmap
   license: GPL (>= 2)
-  summary: Set of routines for making Map Projections (forward and inverse), Topographic Maps,
-    Perspective plots, Geological Maps, geological map symbols, geological databases,
-    interactive plotting and selection of focus regions.
+  summary: Set of routines for making Map Projections (forward and inverse), Topographic Maps, Perspective plots, Geological Maps, geological map symbols, geological databases, interactive plotting and selection of focus regions.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
