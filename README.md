@@ -3,6 +3,7 @@ About r-geomap-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-geomap-feedstock/blob/main/LICENSE.txt)
 
+
 About r-geomap
 --------------
 
@@ -11,6 +12,7 @@ Home: https://CRAN.R-project.org/package=GEOmap
 Package license: GPL-2.0-or-later
 
 Summary: Set of routines for making Map Projections (forward and inverse), Topographic Maps, Perspective plots, Geological Maps, geological map symbols, geological databases, interactive plotting and selection of focus regions.
+
 About r-geomap
 --------------
 
