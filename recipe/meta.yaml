@@ -34,14 +34,14 @@ requirements:
     - r-mba
     - r-rpmg
     - r-fields
-    - r-splancs
+    - r-sf
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
     - r-mba
     - r-rpmg
     - r-fields
-    - r-splancs
+    - r-sf
 
 test:
   commands:
