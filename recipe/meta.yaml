@@ -1,4 +1,4 @@
-{% set version = "2.5-5" %}
+{% set version = "2.5-11" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/GEOmap_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/GEOmap/GEOmap_{{ version }}.tar.gz
-  sha256: 8a17a78926cda3f885584f797db6765d218f89b39eda512ff8af379651fb483f
+  sha256: 976be56d62f39b8e7526dc851bbf77f21db3d366a7ee5a7205aadce13c47cec0
 
 build:
   merge_build_host: true  # [win]
@@ -22,7 +22,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
