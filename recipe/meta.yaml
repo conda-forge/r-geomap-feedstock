@@ -1,6 +1,5 @@
 {% set version = "2.5-11" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-geomap
@@ -13,8 +12,7 @@ source:
   sha256: 976be56d62f39b8e7526dc851bbf77f21db3d366a7ee5a7205aadce13c47cec0
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -39,7 +37,6 @@ requirements:
     - r-sf
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     - r-mba
     - r-rpmg
     - r-fields
